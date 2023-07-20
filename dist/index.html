@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" href="./css/common.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <style>
+      /* body{} */
+      .swiper-container {
+        position: relative;
+      }
+      
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h2>
+        <a href="https://swiperjs.com/">Swiper</a>
+    </h2>
+    <div class="swiper-box">
+        <div class="swiper-parent">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">Slide 0</div>
+                    <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-scrollbar"></div>
+            </div>
+            <div class="swiper-title">スライド0を表示しています。</div>
+        </div>
+        <div class="swiper-parent">
+            <div class="swiper-container" >
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><div class="img-slide" style="text-align: center"><img src="./images/computer_security_key_usb.png"></div></div>
+                    <div class="swiper-slide"><div class="img-slide" style="text-align: center"><img src="./images/computer_server_panku.png"></div></div>
+                    <div class="swiper-slide"><div class="img-slide" style="text-align: center"><img src="./images/internet_404_page_not_found.png"></div></div>
+                    <div class="swiper-slide"><div class="img-slide" style="text-align: center"><img src="./images/internet_firewall1.png"></div></div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-scrollbar"></div>
+            </div>
+            <div class="swiper-title">スライド0を表示しています。</div>
+        </div>
+    </div>
+
+    <hr>
+    <h2>
+        <a href="https://just-validate.dev/">JustValidate</a>
+    </h2>
+    <form id="basic_form" class="box">
+        <div class="flexbox">
+            <div>
+                <p>名前</p>
+            </div>
+            <div>
+                <input id="basic_name" name="user" type="text" placeholder="名前を入力してください。" />
+            </div>
+        </div>
+        <div class="flexbox">
+            <div>
+                <p>メールアドレス</p>
+            </div>
+            <div>
+                <input id="basic_email" name="mail" type="text" placeholder="メールアドレスを入力してください。" />
+            </div>
+        </div>
+        <div class="flexbox">
+            <div>
+                <p>パスワード</p>
+            </div>
+            <div>
+                <input id="basic_password" name="password" type="text" placeholder="パスワードを入力してください。" />
+            </div>
+        </div>
+        <div class="flexbox">
+            <div>
+                <p>年齢</p>
+            </div>
+            <div>
+                <input id="basic_age" name="age" type="text" placeholder="年齢を入力してください。" />
+            </div>
+        </div>
+        <div class="flexbox">
+            <div>
+                <p>住所</p>
+            </div>
+            <div>
+                <input id="basic_address" name="adress" type="text" placeholder="住所を入力してください。" />
+            </div>
+        </div>
+        <div class="submit_div">
+            <button type="submit" id="submit" class="submit_button">送信</button>
+        </div>
+    </form>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+h2{
+	font-size: 24px;
+	font-weight: bold;
+	padding: 26px 0px 5px 10px;
+}
+.box{
+	position: absolute;
+	top: calc(80%);
+	left: calc(50% - 600px/2);
+	background-color: rgb(225, 224, 224);
+	width: 500px;
+	padding: 60px 50px 50px 50px;
+	border-radius: 10px;
+}
+.flexbox{
+	display: flex;
+	height: 80px;
+	padding-left: 10px;
+}
+p{
+	width: 150px;
+	font-weight: bold;
+}
+input{
+	width: 330px;
+	border: 2px solid;
+	border-radius: 5px;
+	padding: 10px;
+}
+.just-validate-error-label {
+	font-weight: bold;
+	display: block;
+	height: 80px;
+	margin-top: 3px;
+}
+.submit_div{
+	margin: 0 auto;
+	padding: 10px 10px 0px 10px;
+	display: flex;
+	justify-content: center;
+}
+.submit_button{
+	display: inline-block;
+	box-sizing: border-box;
+	color: white;
+	background-color: rgb(39, 39, 255);
+	width: 200px;
+	height: 40px;
+	border: 0px;
+	padding: 20px;
+}
+hr{
+	display: block;
+	border-top: 1px solid #aaa;
+	margin: 50px 10px;
+}
+.swiper-box{
+	display: flex;
+	width: 90%;
+	margin-left: 40px;
+	margin-right: 40px;
+}
+.swiper-parent{
+	flex: 1;
+	width: 300px;
+}
+.swiper-container {
+	height: 300px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.swiper-wrapper{
+	width: 560px;
+}
+.swiper-slide {
+	/* display: grid; */
+	/* place-items: center; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+element.style {
+	margin-right: 0;
+}
+.swiper-title{
+	font-weight: bold;
+	margin-left: 35%;
+}
+.img-slide{
+	/* height: 270px; */
+	/* max-height: 90%; */
+	/* max-width: 90%; */
+	object-fit: contain;
+	float: none;
+}
+img{
+	height: 230px;
+}
