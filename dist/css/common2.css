@@ -102,3 +102,18 @@ body{
 		transform: translateX(-100%);
 	}
 }
+.swiper {
+	width: 600px;
+	height: 300px;
+}
+#img_box{
+	position: relative;
+}
+#woman{
+	position: absolute;
+	z-index: 0;
+}
+#parasol{
+	position: absolute;
+	z-index: 1;
+}
