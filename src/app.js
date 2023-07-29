@@ -1,4 +1,7 @@
 import anime from 'animejs/lib/anime.es.js';
+import Swiper from 'swiper/bundle';
+
+import 'swiper/css/bundle';
 
 var tonbi = document.getElementsByClassName("tonbi")[0];
 tonbi.style.transform = 'translateX(100px)';
@@ -162,6 +165,53 @@ document.getElementById('stopButton').addEventListener('click', function() {
 });
 
 
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'vertical',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+
+const parasol = document.getElementById("parasol");
+
+// function animateParasol(){
+//   anime({
+//     targets: parasol,
+//     translateX: [-5, 5, 0], // X軸方向に揺らす範囲
+//     duration: 4000, // アニメーションの時間（ミリ秒）
+//     easing: "easeInOutSine", // イージング関数（滑らかな動きをつける）
+//     loop: true, // アニメーションをループさせる
+//   });
+  
+// }
+function animateParasol(){
+  anime({
+        targets: parasol,
+        rotate: {
+          value: [0, -1, 1.5],
+          duration: 3000,
+          easing: 'easeInOutSine'
+        },
+        direction: 'alternate'
+      });
+}
+
+parasol.onclick = animateParasol;
 
 // ghost cursorは実装できず
 
