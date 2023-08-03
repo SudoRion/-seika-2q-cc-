@@ -15,22 +15,6 @@
 	
 </head>
 <body>
-	<!-- <h1></h1> -->
-	<div>
-		<img src="./images/bird_tonbi.png" class="tonbi">
-	</div>
-	<!-- <div id="granim-container"></div> -->
-	<canvas id="granim-canvas"></canvas>
-
-	<div class="text">
-		<p class="hatena">？？？？</p>
-	</div>
-
-	<div>
-		<button id="playButton">再生</button>
-		<button id="stopButton">停止</button>
-	</div>
-
 	<div class="canvas-interactive-wrapper">
 		<canvas id="canvas-interactive"></canvas>
 		<div id="image-overlay">
@@ -42,31 +26,43 @@
 		    <a href="#orange-state" id="orange-state-cta">Orange state</a>
 		</div>
 	</div>
-		    
-	<div class="ground"></div>
 
-	<canvas id="granimCanvas"></canvas>
+	<div>
+		<button id="playButton">再生</button>
+		<button id="stopButton">停止</button>
+	</div>
 
-	<div class="box"></div>
+	<div class="btn-switch btn-switch-wrap">
+		<input type="checkbox" id="onoff" name="onoff">
+		<div class="btn-switch-bg">
+			<label class="btn-switch-in" for="onoff">
+				<span class="on"></span>
+				<span class="off"></span>
+		  	</label>
+		</div>
+	</div>
+
+	<img id="parasol" src="./images/parasol.png">
 
 
 	<div class="swiper">
 		<div class="swiper-wrapper">
-			<div class="swiper-slide">Slide 1</div>
-			<div class="swiper-slide">Slide 2</div>
-			<div class="swiper-slide">Slide 3</div>
+			<div class="swiper-slide"><img src="./images/fantastic1.png"></div>
+			<div class="swiper-slide"><img src="./images/fantastic2.png"></div>
+			<div class="swiper-slide"><img src="./images/fantastic3.png"></div>
+			<div class="swiper-slide"><img src="./images/fantastic4.png"></div>
+			<div class="swiper-slide"><img src="./images/fantastic5.png"></div>
+			<div class="swiper-slide"><img src="./images/fantastic6.png"></div>
+			<div class="swiper-slide"><img src="./images/fantastic7.png"></div>
+			<div class="swiper-slide"><img src="./images/fantastic8.png"></div>
 		</div>
 		<div class="swiper-pagination"></div>
 		<div class="swiper-button-prev"></div>
 		<div class="swiper-button-next"></div>
 		<div class="swiper-scrollbar"></div>
 	</div>
-	<div id="img_box">
-		<img id="woman" src="./images/Woman with a Parasol.jpg" height="700px">
-		<img id="parasol" src="./images/parasol.png" onclick="" height="700px">
-	</div>
 
-
+	<canvas id="granimCanvas"></canvas>
 
 	<script src="granim.min.js"></script>
 	<script src="app.js"></script>
