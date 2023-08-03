@@ -6,13 +6,6 @@
 	<link rel="stylesheet" href="./css/common2.css">
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<title>Document</title>
-	<style>
-		#granim-container {
-      		width: 400px;
-      		height: 400px;
-    		}
-	</style>
-	
 </head>
 <body>
 	<div class="canvas-interactive-wrapper">
@@ -21,15 +14,10 @@
 			<img id="image" src="./images/k0161_10.png" alt="Image">
 		</div>
 		<div class="cta-wrapper">
-		    <a href="#default-state" id="default-state-cta" class="active">Default state</a>
-		    <a href="#violet-state" id="violet-state-cta">Violet state</a>
-		    <a href="#orange-state" id="orange-state-cta">Orange state</a>
+		    <a href="#default-state" id="default-state-cta" class="active">Calm</a>
+		    <a href="#violet-state" id="violet-state-cta">Thinking</a>
+		    <a href="#orange-state" id="orange-state-cta">Cheerful</a>
 		</div>
-	</div>
-
-	<div>
-		<button id="playButton">再生</button>
-		<button id="stopButton">停止</button>
 	</div>
 
 	<div class="btn-switch btn-switch-wrap">
@@ -42,24 +30,34 @@
 		</div>
 	</div>
 
-	<img id="parasol" src="./images/parasol.png">
+	<img id="parasol" src="./images/parasol.png" hidden>
+	<div class="text_ple">
+		<p id="content">◀ Please click </p>
+	</div>
 
-
-	<div class="swiper">
-		<div class="swiper-wrapper">
-			<div class="swiper-slide"><img src="./images/fantastic1.png"></div>
-			<div class="swiper-slide"><img src="./images/fantastic2.png"></div>
-			<div class="swiper-slide"><img src="./images/fantastic3.png"></div>
-			<div class="swiper-slide"><img src="./images/fantastic4.png"></div>
-			<div class="swiper-slide"><img src="./images/fantastic5.png"></div>
-			<div class="swiper-slide"><img src="./images/fantastic6.png"></div>
-			<div class="swiper-slide"><img src="./images/fantastic7.png"></div>
-			<div class="swiper-slide"><img src="./images/fantastic8.png"></div>
+	<div id="div_swiper" hidden>
+		<div class="swiper">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide"><img src="./images/fantastic1.png"></div>
+				<div class="swiper-slide"><img src="./images/fantastic2.png"></div>
+				<div class="swiper-slide"><img src="./images/fantastic3.png"></div>
+				<div class="swiper-slide"><img src="./images/fantastic4.png"></div>
+				<div class="swiper-slide"><img src="./images/fantastic5.png"></div>
+				<div class="swiper-slide"><img src="./images/fantastic6.png"></div>
+				<div class="swiper-slide"><img src="./images/fantastic7.png"></div>
+				<div class="swiper-slide"><img src="./images/fantastic8.png"></div>
+				<div class="swiper-slide"><img src="./images/autumn_img.png"></div>
+				<div class="swiper-slide"><img src="./images/lake1.png"></div>
+				<div class="swiper-slide"><img src="./images/lake2.png"></div>
+				<div class="swiper-slide"><img src="./images/lake3.png"></div>
+				<div class="swiper-slide"><img src="./images/lake4.png"></div>
+				<div class="swiper-slide"><img src="./images/lake5.png"></div>
+			</div>
+			<div class="swiper-pagination"></div>
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>
+			<div class="swiper-scrollbar"></div>
 		</div>
-		<div class="swiper-pagination"></div>
-		<div class="swiper-button-prev"></div>
-		<div class="swiper-button-next"></div>
-		<div class="swiper-scrollbar"></div>
 	</div>
 
 	<canvas id="granimCanvas"></canvas>

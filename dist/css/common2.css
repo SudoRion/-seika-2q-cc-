@@ -3,7 +3,7 @@ body{
 }
 .canvas-interactive-wrapper {
 	position: relative;
-	height: 500px;
+	height: 700px;
 	text-align: center;
 }
 .canvas-interactive-wrapper canvas {
@@ -43,6 +43,8 @@ body{
 	text-decoration: none;
 	color: #222;
 	transition: border .3s;
+	font-size: 30px;
+	font-family: 'Courier New', Courier, monospace;
 }
 .canvas-interactive-wrapper .cta-wrapper a.active {
 	border-color: #222;
@@ -63,15 +65,16 @@ body{
 #image {
 	width: 20%;
 	height: auto;
-	animation: scrollImage 10s linear infinite;
+	margin-top: 30px;
+	animation: scrollImage 30s linear infinite;
 }
 
 @keyframes scrollImage {
 	0% {
-		transform: translateX(0);
+		transform: translateX(300%);
 	}
 	100% {
-		transform: translateX(-100%);
+		transform: translateX(-300%);
 	}
 }
 .swiper {
@@ -90,9 +93,17 @@ div > img{
 }
 #granimCanvas{
 	width: 100%;
+	height: 500px;
 	position: absolute;
 	z-index: -1;
-	top: 100%;
+	top: 90%;
+}
+.text_ple{
+	position: absolute;
+	top: 620px;
+	left: 500px;
+	font-size: 20px;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 #parasol{
 	height: 640px;
@@ -111,15 +122,15 @@ div > img{
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  font-size: 62.5%;
+  font-size: 41.67%;
 }
 
 .btn,
 a.btn,
 button.btn {
-  font-size: 1.6rem;
+  font-size: 0.53rem;
   font-weight: 700;
-  line-height: 1.5;
+  line-height: 1.25;
   position: relative;
   display: inline-block;
   padding: 1rem 4rem;
@@ -139,12 +150,14 @@ button.btn {
 }
 
 .btn-switch {
-  width: 148px;
-  height: 250px;
-  margin: 0 auto;
-  padding: 20px;
+	position: absolute;
+	top: 550px;
+  width: 49px;
+  height: 83.33px;
+  margin-left:20px;
+  padding: 6.67px;
 
-  border-radius: 10px;
+  border-radius: 3.33px;
   background: -webkit-gradient(
     linear,
     left top,
@@ -165,7 +178,7 @@ button.btn {
 }
 
 .btn-switch input:checked + .btn-switch-bg .on {
-  height: 20px;
+  height: 15px;
 
   -webkit-transform: scaleY(0.85);
 
@@ -182,7 +195,7 @@ button.btn {
 }
 
 .btn-switch input:checked + .btn-switch-bg .btn-switch-in {
-  margin-top: 20px;
+  margin-top: 5px;
 
   -webkit-box-shadow: inset 8px -4px 5px -7px black,
     inset -8px -4px 5px -7px black, 0 -3px 8px -4px rgba(250, 250, 250, 0.4),
@@ -224,15 +237,15 @@ button.btn {
 }
 
 .btn-switch-bg {
-  width: 108px;
-  height: 210px;
-  padding: 4px 4px;
+  width: 36px;
+  height: 70px;
+  padding: 1.33px;
 
   -webkit-transition: all 0.2s;
 
   transition: all 0.2s;
 
-  border-radius: 5px;
+  border-radius: 1.67px;
   background-color: #000;
   background-image: -webkit-linear-gradient(
       0deg,
@@ -259,8 +272,8 @@ button.btn {
 
   display: block;
 
-  width: 100px;
-  height: 178px;
+  width: 33.33px;
+  height: 59.33px;
 
   -webkit-transition: all 0.2s;
 
@@ -279,11 +292,11 @@ button.btn {
 
 .btn-switch-in .on {
   position: absolute;
-  top: 30px;
-  left: calc(50% - 2px);
+  top: 5px;
+  left: calc(50% - 1px);
 
-  width: 4px;
-  height: 22px;
+  width: 1.33px;
+  height: 7.33px;
 
   -webkit-transition: all 0.1s ease;
 
@@ -295,11 +308,11 @@ button.btn {
 
 .btn-switch-in .off {
   position: absolute;
-  bottom: 30px;
-  left: calc(50% - 12px);
+  bottom: 7px;
+  left: calc(50% - 4px);
 
-  width: 24px;
-  height: 24px;
+  width: 8px;
+  height: 8px;
 
   -webkit-transition: all 0.3s ease;
 
