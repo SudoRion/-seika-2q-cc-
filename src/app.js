@@ -3,30 +3,30 @@ import Swiper from 'swiper/bundle';
 
 import 'swiper/css/bundle';
 
-var tonbi = document.getElementsByClassName("tonbi")[0];
-tonbi.style.transform = 'translateX(100px)';
+// var tonbi = document.getElementsByClassName("tonbi")[0];
+// tonbi.style.transform = 'translateX(100px)';
 
-function clickEvent(){
-  anime({
-        targets: '.tonbi',
-        translateX: {
-          value: '*=2.5', // 100px * 2.5 = '250px'
-          duration: 1000
-        },
-        width: {
-          value: '-=20px', // 28 - 20 = '8px'
-          duration: 1800,
-          easing: 'easeInOutSine'
-        },
-        rotate: {
-          value: '+=2turn', // 0 + 2 = '2turn'
-          duration: 1800,
-          easing: 'easeInOutSine'
-        },
-        direction: 'alternate'
-      });
-}
-tonbi.onclick = clickEvent;
+// function clickEvent(){
+//   anime({
+//         targets: '.tonbi',
+//         translateX: {
+//           value: '*=2.5', // 100px * 2.5 = '250px'
+//           duration: 1000
+//         },
+//         width: {
+//           value: '-=20px', // 28 - 20 = '8px'
+//           duration: 1800,
+//           easing: 'easeInOutSine'
+//         },
+//         rotate: {
+//           value: '+=2turn', // 0 + 2 = '2turn'
+//           duration: 1800,
+//           easing: 'easeInOutSine'
+//         },
+//         direction: 'alternate'
+//       });
+// }
+// tonbi.onclick = clickEvent;
 
 // 【　別の書き方　】
 // tonbi.addEventListener('click', function() {
@@ -49,22 +49,6 @@ tonbi.onclick = clickEvent;
 //     direction: 'alternate'
 //   });
 // });
-
-var granimInstance = new Granim({
-  element: '#granim-canvas',
-  name: 'granim',
-  opacity: [1, 1],
-  states : {
-      "default-state": {
-          gradients: [
-              ['#834D9B', '#D04ED6'],
-              ['#1CD8D2', '#93EDC7']
-          ]
-      }
-  }
-});
-
-// granimInstance.start();
 
 var granimInstance = new Granim({
   element: '#canvas-interactive',
@@ -157,83 +141,56 @@ const sound = new Howl({
   src: [soundFile]
 });
 
-document.getElementById('playButton').addEventListener('click', function() {
-  sound.play();
-});
-document.getElementById('stopButton').addEventListener('click', function() {
-  sound.stop();
-});
+const onoffSwitch = document.getElementById('onoff');
+const parasol = document.getElementById("parasol");
+const div_swiper = document.getElementById("div_swiper");
+var content = document.getElementById('content');
 
+onoffSwitch.addEventListener('change', function() {
+  if (this.checked) {
+    sound.play();
+    div_swiper.removeAttribute("hidden");
+    parasol.removeAttribute("hidden");
+    content.textContent = 'Please scroll and click ▼';
+  } else {
+    sound.stop();
+    div_swiper.setAttribute("hidden","");
+    parasol.setAttribute("hidden","");
+    content.textContent = '◀ Please click';
+  }
+});
 
 const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  direction: 'vertical',
+  direction: 'horizontal',
   loop: true,
+  effect: 'fade',
+  speed: 600,
 
-  // If we need pagination
   pagination: {
     el: '.swiper-pagination',
   },
 
-  // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
 
-  // And if we need scrollbar
   scrollbar: {
     el: '.swiper-scrollbar',
   },
 });
 
-const parasol = document.getElementById("parasol");
-
-// function animateParasol(){
-//   anime({
-//     targets: parasol,
-//     translateX: [-5, 5, 0], // X軸方向に揺らす範囲
-//     duration: 4000, // アニメーションの時間（ミリ秒）
-//     easing: "easeInOutSine", // イージング関数（滑らかな動きをつける）
-//     loop: true, // アニメーションをループさせる
-//   });
-  
-// }
 function animateParasol(){
   anime({
-        targets: parasol,
-        rotate: {
-          value: [0, -1, 1.5],
-          duration: 3000,
-          easing: 'easeInOutSine'
-        },
-        direction: 'alternate'
-      });
+    targets: parasol,
+    translateX: [-2, 2, 0],
+    duration: 4000,
+    easing: "easeInOutSine",
+    // loop: true,
+  });
+  
 }
 
 parasol.onclick = animateParasol;
 
 // ghost cursorは実装できず
-
-// import { path } from "ghost-cursor"
-
-// const from = { x: 100, y: 100 }
-// const to = { x: 600, y: 700 }
-
-// const route = path(from, to)
-
-// import { createCursor } from "ghost-cursor"
-// import puppeteer from "puppeteer"
-
-// const run = async (url) => {
-//   const selector = "#sign-up button"
-//   const browser = await puppeteer.launch({ headless: false });
-//   const page = await browser.newPage()
-//   const cursor = createCursor(page)
-//   await page.goto(url)
-//   await page.waitForSelector(selector)
-//   await cursor.click(selector)
-// //   shorthand for
-// //   await cursor.move(selector)
-// //   await cursor.click()
-// }
